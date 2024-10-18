@@ -1,3 +1,7 @@
 export * from './Home'
+export * from './Tips'
+export * from './Invite'
+export * from './Salary'
 export * from './Contacts'
 export * from './Services'
+export * from './CodeOfConduct'
