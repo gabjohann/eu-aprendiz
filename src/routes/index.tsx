@@ -11,6 +11,8 @@ import {
   Tips,
   Invite,
   Salary,
+  Videos,
+  Calendar,
 } from '../screens'
 
 const { Navigator, Screen } = createBottomTabNavigator()
@@ -25,7 +27,7 @@ export function Routes() {
         }}
       >
         <Screen
-          name="Home"
+          name="Início"
           component={Home}
           options={{
             tabBarIcon: ({ size, color }) => (
@@ -34,7 +36,7 @@ export function Routes() {
           }}
         />
         <Screen
-          name="Services"
+          name="Serviços"
           component={Services}
           options={{
             tabBarIcon: ({ size, color }) => (
@@ -43,11 +45,20 @@ export function Routes() {
           }}
         />
         <Screen
-          name="Contacts"
+          name="Contatos"
           component={Contacts}
           options={{
             tabBarIcon: ({ size, color }) => (
               <Feather name="phone-call" size={size} color={color} />
+            ),
+          }}
+        />
+        <Screen
+          name="Videos"
+          component={Videos}
+          options={{
+            tabBarIcon: ({ size, color }) => (
+              <Feather name="youtube" size={size} color={color} />
             ),
           }}
         />
@@ -69,6 +80,11 @@ export function Routes() {
         <Screen
           name="Salary"
           component={Salary}
+          options={{ tabBarButton: () => null }}
+        />
+        <Screen
+          name="Calendar"
+          component={Calendar}
           options={{ tabBarButton: () => null }}
         />
       </Navigator>

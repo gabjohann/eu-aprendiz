@@ -1,8 +1,11 @@
-import { StyleSheet, Image, Text, View } from 'react-native'
+import { StyleSheet, Image, Text, View, TouchableOpacity } from 'react-native'
 import { colors } from '../colors'
 import logo from '../assets/logo.png'
+import { useNavigation } from '@react-navigation/native'
 
 export function Home() {
+  const navigation = useNavigation()
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -27,6 +30,13 @@ export function Home() {
           meio escolar para o ambiente profissional um pouco mais fácil e menos
           confuso.
         </Text>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Calendar')}
+        >
+          <Text style={styles.buttonText}>Agenda</Text>
+        </TouchableOpacity>
       </View>
     </View>
   )
@@ -77,6 +87,25 @@ const styles = StyleSheet.create({
 
   description: {
     fontSize: 18,
+    lineHeight: 28,
+    fontWeight: '700',
+    paddingBottom: 20,
+    color: colors.blueSenac,
+  },
+
+  button: {
+    width: 180,
+    alignItems: 'center',
+    marginVertical: 0,
+    marginHorizontal: 'auto',
+    borderWidth: 2,
+    borderColor: colors.orangeSenac,
+    borderRadius: 6,
+    padding: 10,
+  },
+
+  buttonText: {
+    fontSize: 22,
     lineHeight: 28,
     fontWeight: '700',
     color: colors.blueSenac,
