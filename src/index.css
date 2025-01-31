@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#service-card {
+  position: relative; /* Garantir que a fita seja posicionada relativamente ao card */
+}
+
+.tape {
+  position: absolute;
+  top: -85px; /* Ajuste para a fita ficar metade para cima */
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg); /* Centraliza horizontalmente e aplica a rotação */
+  width: 75px;
+  height: 40px;
+  background-color: rgba(248, 248, 255, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para dar realismo */
+}
+
+/* Efeito de serrilhado nas extremidades */
+.tape::after,
+.tape::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: inherit;
+  top: 0;
+  z-index: 2;
+  clip-path: polygon(
+    0 0,
+    50% 10%,
+    0 20%,
+    50% 30%,
+    0 40%,
+    50% 50%,
+    0 60%,
+    50% 70%,
+    0 80%,
+    50% 90%,
+    0 100%
+  );
+}
+
+.tape::before {
+  left: -19.5px;
+  transform: scale(-1);
+}
+
+.tape::after {
+  right: -19.5px;
+}
+
+#service-card .tape {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+.orangeButton {
+  box-shadow: 5px 5px 2px #774a10;
+}
+
+.blueButton {
+  box-shadow: 5px 5px 2px #0b0b32;
+}
