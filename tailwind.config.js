@@ -15,7 +15,7 @@ export default {
 				...gray,
 			},
 			backgroundImage: {
-				videoCard: "url('./src/assets/bg-card.png')",
+				videoCard: "url('./public/bg-card.png')",
 			},
 			keyframes: {
 				overlayShow: {
