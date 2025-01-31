@@ -1,13 +1,37 @@
 export function Header() {
 	return (
 		<header>
-			<nav className="bg-darkBlue py-4">
-				<ul className="flex items-center uppercase text-xs gap-5 justify-center text-white">
-					<li>a empresa</li>
-					<li>serviços</li>
-					<li>vídeos</li>
-					<li>contato</li>
-				</ul>
+			<nav className="flex items-center justify-center gap-5 py-4 text-xs text-white bg-darkBlue">
+				<button
+					type="button"
+					onClick={() =>
+						document
+							.getElementById('services')
+							?.scrollIntoView({ behavior: 'smooth' })
+					}
+				>
+					SERVIÇOS
+				</button>
+				<button
+					type="button"
+					onClick={() =>
+						document
+							.getElementById('videos')
+							?.scrollIntoView({ behavior: 'smooth' })
+					}
+				>
+					VÍDEOS
+				</button>
+				<button
+					type="button"
+					onClick={() =>
+						document
+							.getElementById('contact')
+							?.scrollIntoView({ behavior: 'smooth' })
+					}
+				>
+					CONTATO
+				</button>
 			</nav>
 		</header>
 	)
