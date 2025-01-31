@@ -1,4 +1,5 @@
 import { Backpack, DollarSign, Handshake, Info } from 'lucide-react'
+import { Calculator } from './calculator'
 import { ServiceCard } from './service-card'
 
 export function Services() {
@@ -102,33 +103,35 @@ export function Services() {
 									Esse depende do salário do Jovem Aprendiz.
 								</span>
 							</p>
-							<p>
-								Você tem que saber o seu salário bruto, que é o valor total,
-								para poder saber qual será seu salário líquido, que é o valor
-								com descontos. Em seguida some os valores dos descontos
-								obrigatórios <strong>(INSS, FGTS, vale transporte, etc)</strong>
-								. Depois
-								<span className="underline"> subtraia</span> os descontos do
-								salário bruto. Por exemplo, se um Jovem Aprendiz recebe um
-								salário bruto de <strong>R$ 700</strong> os descontos seriam:
+							<div>
+								<p>
+									Você tem que saber o seu salário bruto, que é o valor total,
+									para poder saber qual será seu salário líquido, que é o valor
+									com descontos. Em seguida some os valores dos descontos
+									obrigatórios{' '}
+									<strong>(INSS, FGTS, vale transporte, etc)</strong>. Depois
+									<span className="underline"> subtraia</span> os descontos do
+									salário bruto. Por exemplo, se um Jovem Aprendiz recebe um
+									salário bruto de <strong>R$ 700</strong> os descontos seriam:
+								</p>
 								<br />
-								<ul className="text-center">
-									<li>
+								<div className="text-center">
+									<p>
 										<strong>INSS:</strong>{' '}
 										<span className="text-red-500">8%</span> de R$700,00 ={' '}
 										<span className="text-green-500">R$56,00</span>
-									</li>
-									<li>
+									</p>
+									<p>
 										<strong>FGTS:</strong>{' '}
 										<span className="text-red-500">2%</span> de R$700,00 ={' '}
 										<span className="text-green-500">R$14,00</span>
-									</li>
-									<li>
+									</p>
+									<p>
 										<strong>Vale Transporte:</strong>{' '}
 										<span className="text-red-500">6%</span> de R$700,00 ={' '}
 										<span className="text-green-500">R$42,00</span>
-									</li>
-								</ul>
+									</p>
+								</div>
 								<p className="pt-4 underline">
 									Total de descontos: R$ 56,00 + R$ 14,00 + R$ 42,00 = R$ 112,00
 									Salário Líquido: R$ 700,00 - R$ 112,00 = R$ 588,00
@@ -145,7 +148,9 @@ export function Services() {
 									<strong>Exemplo</strong>: R$ 700,00 dividido por 23 (dias do
 									mês 10 de 2024)
 								</p>
-							</p>
+							</div>
+
+							<Calculator />
 						</div>
 					}
 					color="blue"
