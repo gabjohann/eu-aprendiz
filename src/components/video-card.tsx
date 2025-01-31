@@ -11,8 +11,6 @@ export function VideoCard({ title, link }: VideoCardProps) {
 			</p>
 
 			<div className="flex items-end flex-grow w-full">
-				{' '}
-				{/* Alinha o botão na parte inferior */}
 				<button
 					type="button"
 					className="w-full px-6 py-3 text-xs text-white uppercase rounded bg-orange orangeButton"
