@@ -9,14 +9,19 @@ export function VideoCard({ title, link }: VideoCardProps) {
 			<p className="pb-16 text-base text-center uppercase text-orange">
 				{title}
 			</p>
-			<button
-				type="button"
-				className="px-6 py-3 text-xs text-white uppercase rounded bg-orange orangeButton"
-			>
-				<a href={link} target="_blank" rel="noreferrer">
-					Saiba mais
-				</a>
-			</button>
+
+			<div className="flex items-end flex-grow w-full">
+				{' '}
+				{/* Alinha o botão na parte inferior */}
+				<button
+					type="button"
+					className="w-full px-6 py-3 text-xs text-white uppercase rounded bg-orange orangeButton"
+				>
+					<a href={link} target="_blank" rel="noreferrer">
+						Saiba mais
+					</a>
+				</button>
+			</div>
 		</div>
 	)
 }
