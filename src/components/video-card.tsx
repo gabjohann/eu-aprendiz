@@ -5,7 +5,7 @@ type VideoCardProps = {
 
 export function VideoCard({ title, link }: VideoCardProps) {
 	return (
-		<div className="flex flex-col items-center w-40 h-auto px-4 pt-12 pb-8 bg-videoCard lg:w-52">
+		<div className="flex flex-col items-center w-40 h-auto px-4 pt-12 pb-8 bg-darkBlue lg:w-52">
 			<p className="pb-16 text-base text-center uppercase text-orange">
 				{title}
 			</p>
